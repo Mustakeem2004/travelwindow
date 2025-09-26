@@ -14,7 +14,7 @@ router.post("/login", passport.authenticate("local", { session: false }), authCo
 router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 router.get(
   "/google/callback",
-  passport.authenticate("google", { failureRedirect: "http://localhost:5173/login", session: false }),
+  passport.authenticate("google", { failureRedirect: "https://travelwindow.vercel.app/login", session: false }),
   authController.socialLoginCallback
 );
 
