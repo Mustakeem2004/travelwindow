@@ -9,7 +9,7 @@ import Contact from './components/Pages/Contact';
 import Home from './components/Pages/Home';
 // import Hotels from './components/Pages/Hotels';
 import NotFound from './components/Pages/Notfound';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Signup from './components/Pages/Signup';
 import Login from './components/Pages/Login';
