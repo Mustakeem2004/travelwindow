@@ -129,13 +129,6 @@ const HotelCard = forwardRef(({ hotel }, ref) => {
     }
   };      
      
-
-
-
-    
-
-
-
   return (
     <div
       ref={ref}
