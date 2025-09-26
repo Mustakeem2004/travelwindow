@@ -1,0 +1,105 @@
+.contactPage {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.contactHero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.contactHero h1 {
+  font-size: 3rem;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.contactHero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Form Section */
+.contactFormSection {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.formContainer {
+  display: flex;
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Form */
+.contactForm {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactForm label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+}
+
+.contactForm button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contactForm button:hover {
+  background-color: #005fa3;
+}
+
+/* Contact Info */
+.contactInfo {
+  flex: 1;
+  min-width: 250px;
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.contactInfo h2 {
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+.contactInfo p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formContainer {
+    flex-direction: column;
+  }
+}

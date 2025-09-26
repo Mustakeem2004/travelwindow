@@ -1,0 +1,196 @@
+/* ------------------------ Container ------------------------ */
+.hotel-details-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------ Search bar wrapper ------------------------ */
+.searchbar-wrapper {
+  width: 100%;
+  max-width: 1030px;
+  margin-bottom: 20px;
+}
+
+/* ------------------------ Image Gallery ------------------------ */
+.hotel-gallery {
+  display: flex;
+  gap: 10px;
+  max-width: 1030px;
+  width: 100%;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Thumbnail grid */
+.thumbnail-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail-grid img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.thumbnail-grid img.active {
+  border: 2px solid #0071c2;
+}
+
+/* ------------------------ Hotel Info Header ------------------------ */
+.hotel-header, .hotel-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1030px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.hotel-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hotel-address {
+  font-size: 16px;
+  color: #555;
+  margin-top: 5px;
+  width: 500px;
+}
+
+.hotel-rating {
+  text-align: center;
+  background-color: green;
+  border-radius: 15px;
+  padding: 2px;
+  color: white;
+  margin: 0px;
+  width: 70px;
+  
+}
+
+.addtocart{
+    background: linear-gradient(135deg, #0071c2, #005fa3);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+
+}
+
+.addtocart:hover{
+    background: linear-gradient(135deg, #005fa3, #004080);
+}
+
+/* ------------------------ Property Type ------------------------ */
+.property-type {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+/* ------------------------ Sections: Description / Amenities ------------------------ */
+.hotel-section {
+  max-width: 1030px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.hotel-section h2,
+.hotel-section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+
+
+.amenities {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+}
+
+.amenities li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ------------------------ Book Button ------------------------ */
+.book-now {
+  margin-top: 30px;
+}
+
+.book-button {
+  background: #ff6b6b;
+  color: white;
+  font-size: 18px;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-button:hover {
+  background: #ff4c4c;
+}
+
+/* ------------------------ Loading / Error ------------------------ */
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+/* ------------------------ Responsive ------------------------ */
+@media (max-width: 768px) {
+  .hotel-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-grid img {
+    width: 100px;
+    height: 70px;
+  }
+
+  .hotel-header, .hotel-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

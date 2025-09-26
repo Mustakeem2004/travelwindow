@@ -1,0 +1,16 @@
+import React from 'react'
+import Hero from '../Hero'
+// import { hotels } from './Hotels'
+import TrendingDestinationList from '../TrendingDestinationList'
+
+const Home = () => {
+  return (
+    <div>
+      <Hero />
+      <TrendingDestinationList></TrendingDestinationList>
+      
+    </div>
+  )
+}
+
+export default Home
