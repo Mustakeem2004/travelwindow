@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, Navigate } from 'react-router-dom'
-import './TrendingDestinationCard.css'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { SearchContext } from '../context/SearchContext'
