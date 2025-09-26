@@ -55,45 +55,45 @@ export const CartProvider = ({ children }) => {
   };
 
   // Remove from cart
-  // const removeFromCart = async (hotelId) => {
-  //   if (!userId) 
-  //     return
-
-  //   try {
-  //     const res = await fetch(`${BASE_URL}/remove/${userId}/${hotelId}`, {
-  //       method: "DELETE",
-  //     });
-  //     if (!res.ok) throw new Error(await res.text());
-  //     const data = await res.json();
-  //     setCartItems(data);
-  //   } catch (err) {
-  //     console.error("Error removing from cart:", err);
-  //   }
-  // };
-
   const removeFromCart = async (hotelId) => {
-  if (!userId) return;
+    if (!userId) 
+      return
 
-  // 1️⃣ Update UI immediately (optimistic update)
-  setCartItems(cartItems.filter((item) => item.hotelId !== hotelId));
+    try {
+      const res = await fetch(`${BASE_URL}/remove/${userId}/${hotelId}`, {
+        method: "DELETE",
+      });
+      if (!res.ok) throw new Error(await res.text());
+      const data = await res.json();
+      setCartItems(data);
+    } catch (err) {
+      console.error("Error removing from cart:", err);
+    }
+  };
 
-  try {
-    const res = await fetch(`${BASE_URL}/remove/${userId}/${hotelId}`, {
-      method: "DELETE",
-      credentials: "include"
-    });
-    if (!res.ok) throw new Error(await res.text());
-    // 2️⃣ Optionally update cartItems from server response
-    const data = await res.json();
-    setCartItems(data); 
-  } catch (err) {
-    console.error("Error removing from cart:", err);
-    // 3️⃣ rollback in case of error
-    fetch(`${BASE_URL}/${userId}`)
-      .then((res) => res.json())
-      .then((data) => setCartItems(data));
-  }
-};
+//   const removeFromCart = async (hotelId) => {
+//   if (!userId) return;
+
+//   // 1️⃣ Update UI immediately (optimistic update)
+//   setCartItems(cartItems.filter((item) => item.hotelId !== hotelId));
+
+//   try {
+//     const res = await fetch(`${BASE_URL}/remove/${userId}/${hotelId}`, {
+//       method: "DELETE",
+//       credentials: "include"
+//     });
+//     if (!res.ok) throw new Error(await res.text());
+//     // 2️⃣ Optionally update cartItems from server response
+//     const data = await res.json();
+//     setCartItems(data); 
+//   } catch (err) {
+//     console.error("Error removing from cart:", err);
+//     // 3️⃣ rollback in case of error
+//     fetch(`${BASE_URL}/${userId}`)
+//       .then((res) => res.json())
+//       .then((data) => setCartItems(data));
+//   }
+// };
 
   if (loading) return <div>Loading...</div>;
 
