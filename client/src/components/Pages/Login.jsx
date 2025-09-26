@@ -37,6 +37,8 @@ const Login = () => {
       if (!response.ok) throw new Error(data.error || "Failed to login");
 
       await fetchUser(); // Refresh user context
+      navigate('/');
+
 
       alert("Login successful!");
   
