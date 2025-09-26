@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const authMiddleware = (req, res, next) => {
+const authmiddleware = (req, res, next) => {
   try {
     const token = req.cookies?.token; // or req.headers.authorization
     if (!token) return res.status(401).json({ message: "Unauthorized" });
@@ -15,6 +15,6 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
-module.exports = authMiddleware;
+module.exports = authmiddleware;
 
 
