@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require("../config/passport"); // your passport strategies
 const authController = require("../controllers/authController");
-const authMiddleware = require("../middleware/authmiddleware");
+const authmiddleware = require("../middleware/authmiddleware");
 
 // Signup endpoint
 router.post("/signup", authController.signup);
@@ -26,7 +26,7 @@ router.get(
 router.post("/logout", authController.logout);
 
 // Get logged-in user
-router.get("/me", authMiddleware, authController.getMe);
+router.get("/me", authmiddleware, authController.getMe);
 
 module.exports = router;
 
