@@ -164,10 +164,10 @@ exports.socialLoginCallback = async (req, res) => {
     });
 
     // Redirect to frontend after login
-    res.redirect("http://localhost:5173/"); // frontend home/dashboard
+    res.redirect("https://travelwindow.vercel.app/"); // frontend home/dashboard
   } catch (err) {
     console.error(err);
-    res.redirect("http://localhost:5173/login?error=OAuthFailed");
+    res.redirect("https://travelwindow.vercel.app/login?error=OAuthFailed");
   }
 };
 

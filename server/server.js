@@ -23,7 +23,7 @@ app.use(cookieParser());
 // --- CORS middleware ---
 app.use(
   cors({
-    origin: "*", // your React frontend
+    origin: ["https://travelwindow.vercel.app/","http://localhost:5173"], // your React frontend
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
