@@ -148,7 +148,14 @@
 
 
 
-
+import './Navbar.css';
+import logo from '../assets/bannerimages/mountain.png';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useContext, useEffect, useRef } from 'react';
+import userIcon from './user.png';
+import trolley from './trolley.png';
+import { AuthContext } from '../context/AuthContext';
+import { CartContext } from '../context/CartContext'; // 👈 add this
 
 
 
