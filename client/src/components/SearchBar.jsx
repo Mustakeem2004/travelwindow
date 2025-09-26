@@ -185,7 +185,7 @@ function SearchBar() {
     }
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:8000/api/cities?query=${encodeURIComponent(input)}`);
+      const res = await fetch(`https://github.com/Mustakeem2004/travelwindow/api/cities?query=${encodeURIComponent(input)}`);
       const data = await res.json();
       setSuggestions(data);
     } catch (err) {

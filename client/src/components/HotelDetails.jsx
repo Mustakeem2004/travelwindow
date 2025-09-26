@@ -23,7 +23,7 @@ const HotelDetails = () => {
             
             try {
     
-                const response = await fetch(`http://localhost:8000/api/hotel/${id}/details`);
+                const response = await fetch(`https://github.com/Mustakeem2004/travelwindow/api/hotel/${id}/details`);
                 const data = await response.json();
                 setHotel(data);
                 return;

@@ -25,7 +25,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch("http://localhost:8000/api/auth/logout", {
+      await fetch("https://github.com/Mustakeem2004/travelwindow/api/auth/logout", {
         method: "POST",
         credentials: "include",
       });

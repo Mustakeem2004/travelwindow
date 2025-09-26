@@ -196,8 +196,8 @@ const HotelList = () => {
       else setLoadingMore(true);
 
       const url = token
-        ? `http://localhost:8000/api/hotels?pagetoken=${token}`
-        : `http://localhost:8000/api/hotels?city=${encodeURIComponent(city)}`;
+        ? `https://github.com/Mustakeem2004/travelwindow/api/hotels?pagetoken=${token}`
+        : `https://github.com/Mustakeem2004/travelwindow/api/hotels?city=${encodeURIComponent(city)}`;
 
       const response = await fetch(url);
       const data = await response.json();
