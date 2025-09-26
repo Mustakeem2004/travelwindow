@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
 
     const fetchCart = async () => {
       try {
-        const res = await fetch(`${BASE_URL}/${userId}`);
+        const res = await fetch(`${BASE_URL}/${userId}`,{credentials: "include"});
         if (!res.ok) throw new Error("Failed to fetch cart");
         const data = await res.json();
         setCartItems(data);
@@ -42,6 +42,7 @@ export const CartProvider = ({ children }) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId, hotelId}),
+        credentials: "include"
       });
       if (!res.ok) throw new Error(await res.text());
       const data = await res.json();
@@ -79,6 +80,7 @@ export const CartProvider = ({ children }) => {
   try {
     const res = await fetch(`${BASE_URL}/remove/${userId}/${hotelId}`, {
       method: "DELETE",
+      credentials: "include"
     });
     if (!res.ok) throw new Error(await res.text());
     // 2️⃣ Optionally update cartItems from server response
@@ -93,7 +95,7 @@ export const CartProvider = ({ children }) => {
   }
 };
 
-  // if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
 
   return (
     <CartContext.Provider value={{ cartItems,cartCount: cartItems.length, addToCart, removeFromCart }}>
