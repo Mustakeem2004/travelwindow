@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require("../config/passport"); // your passport strategies
 const authController = require("../controllers/authController");
-const authmiddleware = require("../middleware/authmiddleware.js");
+const authmiddleware = require("../middleware/authMiddleware");
 
 // Signup endpoint
 router.post("/signup", authController.signup);
