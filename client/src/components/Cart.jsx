@@ -21,7 +21,7 @@ const Cart = () => {
         const fetchedHotels = await Promise.all(
           cartItems.map(async (item) => {
             const res = await fetch(
-              `https://github.com/Mustakeem2004/travelwindow/${item.hotelId}/details`
+              `https://travelwindow-backend.onrender.com/${item.hotelId}/details`
             );
             const data = await res.json();
             return data; // full hotel info from your backend proxy

@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
   const userId = user?._id;
 
   const [cartItems, setCartItems] = useState([]);
-  const BASE_URL = "http://localhost:8000/api/cart";
+  const BASE_URL = "https://travelwindow-backend.onrender.com/api/cart";
 
   // Fetch cart when userId changes
   useEffect(() => {

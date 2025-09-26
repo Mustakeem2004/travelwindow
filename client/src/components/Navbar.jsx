@@ -25,7 +25,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await fetch("https://github.com/Mustakeem2004/travelwindow/api/auth/logout", {
+      await fetch("https://travelwindow-backend.onrender.com/api/auth/logout", {
         method: "POST",
         credentials: "include",
       });

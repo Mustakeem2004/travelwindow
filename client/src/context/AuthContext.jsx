@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   // Check if user is logged in on app load
   const fetchUser = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/auth/me", {
+      const res = await fetch("https://travelwindow-backend.onrender.com/api/auth/me", {
         method: "GET",
         credentials: "include", // httpOnly cookie
       });

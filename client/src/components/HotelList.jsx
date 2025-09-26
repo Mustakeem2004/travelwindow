@@ -196,8 +196,8 @@ const HotelList = () => {
       else setLoadingMore(true);
 
       const url = token
-        ? `https://github.com/Mustakeem2004/travelwindow/api/hotels?pagetoken=${token}`
-        : `https://github.com/Mustakeem2004/travelwindow/api/hotels?city=${encodeURIComponent(city)}`;
+        ? `https://travelwindow-backend.onrender.com/api/hotels?pagetoken=${token}`
+        : `https://travelwindow-backend.onrender.com/api/hotels?city=${encodeURIComponent(city)}`;
 
       const response = await fetch(url);
       const data = await response.json();
