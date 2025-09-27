@@ -154,8 +154,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState, useContext, useEffect, useRef } from 'react';
 import userIcon from './user.png';
 import trolley from './trolley.png';
+import lineIcon from './triple.png'
 import { AuthContext } from '../context/AuthContext';
-import { CartContext } from '../context/CartContext'; // 👈 add this
+import { CartContext } from '../context/CartContext';
 
 
 
@@ -163,7 +164,7 @@ function Navbar() {
   const navigate = useNavigate();
   const { user, setUser, loading } = useContext(AuthContext);
   const { cartCount } = useContext(CartContext);
-
+  const [navtoggle,setNavToggle]=useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef();
   const userIconRef = useRef();
@@ -202,6 +203,11 @@ function Navbar() {
   // ✅ Loading check before JSX
   if (loading) return <div>Loading...</div>;
 
+  const changeToggleNav=()=>{
+   setNavToggle((prev) => !prev);
+
+  }
+
   return (
     <nav className="nav_bar">
       {/* Logo */}
@@ -212,15 +218,15 @@ function Navbar() {
       </div>
 
       {/* Nav Links */}
-      <div className="anchor">
+      <div style={{}} className={`${navtoggle ? "tripleshow" : "triplehide"}`}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
-        <Link style={{ backgroundColor: "black", padding: "5px 10px", borderRadius: "10px" }} to="/bookings">Bookings</Link>
+        <Link to="/bookings">Bookings</Link>
       </div>
 
       {/* Right-side icons */}
-      <div style={{ display: "flex", alignItems: "center", gap: "15px", marginRight: "20px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "15px", marginRight: "5px" }}>
         {/* Auth Section */}
         <div style={{ position: "relative" }}>
           {user ? (
@@ -260,8 +266,8 @@ function Navbar() {
             <span
               style={{
                 position: "absolute",
-                top: "-5px",
-                right: "-5px",
+                top: "-10px",
+                right: "50px",
                 background: "red",
                 color: "white",
                 borderRadius: "50%",
@@ -272,12 +278,19 @@ function Navbar() {
                 justifyContent: "center",
                 fontSize: "12px",
                 fontWeight: "bold",
+                zIndex:"-1000000"
               }}
+              className='cartCount'
             >
               {cartCount}
             </span>
+            
           )}
+          <div onClick={changeToggleNav} >
+          <img style={{cursor:"pointer"}} className='triple' src={lineIcon} alt="" />
         </div>
+        </div>
+
       </div>
     </nav>
   );

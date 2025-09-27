@@ -9,6 +9,7 @@ import HotelCard from "./HotelCard";
 import SearchBar from "./SearchBar";
 import { useContext } from "react";
 import './HotelList.css'
+import filterIcon from './filter.png'
 import { HotelContext } from "../context/HotelContext"; // import context
 
 const HotelList = () => {
@@ -26,8 +27,8 @@ const HotelList = () => {
   const [loading, setLoading] = useState(true);
   const [nextPageToken, setNextPageToken] = useState(null);
   const [loadingMore, setLoadingMore] = useState(false);
-    const [showFilters, setShowFilters] = useState(false);
-      const toggleFilters = () => {
+  const [showFilters, setShowFilters] = useState(false);
+  const toggleFilters = () => {
     setShowFilters((prev) => !prev);
   };
 
@@ -156,7 +157,7 @@ const HotelList = () => {
         <div  className="nameCard">
           <div style={{display:"flex", alignItems:"center", gap:"30px"}}>
           <h1>{city.toUpperCase()}</h1>
-           <h4 className="filterIcon" onClick={toggleFilters}> **</h4>
+           <h4 className="filterIcon" onClick={toggleFilters}><img style={{width:"20px"}} src={filterIcon} alt="" /> Filters</h4>
 
           </div>
 

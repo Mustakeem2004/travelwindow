@@ -139,4 +139,12 @@
 
 
 
+.triple{
+  display:none;
+  width:30px;
+  filter:invert(1);
+}
+
+
+
   
