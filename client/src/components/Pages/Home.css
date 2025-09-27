@@ -231,7 +231,61 @@
         .TrendingListImg{
         max-width: 100%;
         margin: auto;
-        gap: 10px;
+        
+    }
+
+}
+
+
+
+
+@media (max-width: 392px){
+
+        .cardsmall{
+        width: 130px;
+        /* height: 140px; */
+    }
+
+
+        .TrendingListImg{
+        max-width: 95%;
+        margin: auto;
+        gap: 8px;
+    }
+
+}
+
+
+@media (max-width: 373px){
+
+        .cardsmall{
+        width: 125px;
+        /* height: 140px; */
+    }
+
+
+        .TrendingListImg{
+        max-width: 95%;
+        margin: auto;
+        gap: 8px;
+    }
+
+}
+
+
+
+@media (max-width: 373px){
+
+        .cardsmall{
+        width: 225px;
+        /* height: 140px; */
+    }
+
+
+        .TrendingListImg{
+        max-width: 95%;
+        margin: auto;
+        gap: 18px;
     }
 
 }
