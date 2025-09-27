@@ -99,6 +99,7 @@
 import React, { forwardRef,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import starRating from "../assets/star.png";
+import './HotelCard.css';
 
 const HotelCard = forwardRef(({ hotel }, ref) => {
   
@@ -132,6 +133,7 @@ const HotelCard = forwardRef(({ hotel }, ref) => {
   return (
     <div
       ref={ref}
+      className="hotelCard"
       style={{
         border: "1px solid #ddd",
         borderRadius: "10px",
@@ -139,17 +141,18 @@ const HotelCard = forwardRef(({ hotel }, ref) => {
         padding: "15px",
         display: "flex",
         gap: "15px",
-        width: "100%",
+        // width: "100%",
       }}
     >
       <img
+        
         src={imgSrc }
         alt={hotel.name}
-
-        style={{ width: "300px", maxHeight: "300px", borderRadius: "10px", objectFit: "cover" }}
+        className="cardImage"
+        
         onError={handleError} // fallback if first URL fails
       />
-      <div style={{ width: "400px" }}>
+      <div className="cardData" style={{ width: "400px" }}>
         <h2 style={{ padding: "0px", margin: "0px" }}>{hotel.name || "No Name"}</h2>
         <p style={{ padding: "0px", margin: "0px" }}>{hotel.formatted_address}</p>
         <p>
@@ -167,6 +170,7 @@ const HotelCard = forwardRef(({ hotel }, ref) => {
             onClick={() =>
               navigate(`/hotels/${hotel.city?.toLowerCase() || "city"}/${hotel.id}`)
             }
+            className="buttonSeeAvailability"
             style={{
               backgroundColor: "#0071c2",
               color: "white",

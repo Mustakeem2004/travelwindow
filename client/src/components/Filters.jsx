@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './Filters.css';
 
 const Filters = ({ onFilterChange }) => {
   const [filters, setFilters] = useState({
@@ -29,12 +30,7 @@ const Filters = ({ onFilterChange }) => {
 
   return (
     <aside
-      style={{
-        width: "250px",
-        padding: "20px",
-        height: "780px",
-        border: "1px solid black", 
-      }}
+      className="filteraside"
     >
       <h1 style={{ margin: "auto", marginBottom: "0px", marginTop: "10px", textAlign: "center" }}>Filters</h1>
       <h4>Hotel Rating</h4>

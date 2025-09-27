@@ -285,6 +285,17 @@ function SearchBar() {
   </ul>
 )}
           </div>
+                    {/* 🔹 Guests */}
+          <div className="card">
+            <h4>Guests <i className="bi bi-caret-down-fill"></i></h4>
+            <input 
+              onChange={handleChangePeople} 
+              type="number" 
+              value={people}
+              placeholder="How many people" 
+              min="1" 
+            />
+          </div>
 
           {/* 🔹 Check-in date */}
           <div className="card">
@@ -308,17 +319,7 @@ function SearchBar() {
             />
           </div>
 
-          {/* 🔹 Guests */}
-          <div className="card">
-            <h4>Guests <i className="bi bi-caret-down-fill"></i></h4>
-            <input 
-              onChange={handleChangePeople} 
-              type="number" 
-              value={people}
-              placeholder="How many people" 
-              min="1" 
-            />
-          </div>
+
 
           {/* 🔹 Explore button */}
           <button className="explore_btn" onClick={handleExplore}>

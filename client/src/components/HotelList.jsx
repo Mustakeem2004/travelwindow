@@ -8,12 +8,13 @@ import Filters from "./Filters";
 import HotelCard from "./HotelCard";
 import SearchBar from "./SearchBar";
 import { useContext } from "react";
+import './HotelList.css'
 import { HotelContext } from "../context/HotelContext"; // import context
 
 const HotelList = () => {
   const { city } = useParams();
   const { cache, saveHotelsToCache } = useContext(HotelContext)
-
+  // const [showFilters, setShowFilters] = useState(true);
   const [hotels, setHotels] = useState([]);
   const [filteredHotels, setFilteredHotels] = useState([]);
   const [filters, setFilters] = useState({
@@ -25,6 +26,10 @@ const HotelList = () => {
   const [loading, setLoading] = useState(true);
   const [nextPageToken, setNextPageToken] = useState(null);
   const [loadingMore, setLoadingMore] = useState(false);
+    const [showFilters, setShowFilters] = useState(false);
+      const toggleFilters = () => {
+    setShowFilters((prev) => !prev);
+  };
 
   const observer = useRef();
 
@@ -138,19 +143,24 @@ const HotelList = () => {
   };
 
   return (
-    <div style={{ marginLeft: "170px" }}>
-      <div style={{ margin: "10px 0px" }}>
+    <div style={{ display:"flex",flexDirection:"column",alignItems:"center" }}>
+      <div  style={{ margin: "10px 10px" }}>
         <SearchBar />
       </div>
 
-      <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
-        <div style={{ top: "87px" }}>
+      <div style={{ display: "flex", gap: "20px"}}>
+        <div  className={`filters-wrapper ${showFilters ? "show" : ""}`} style={{top:"87px"}}>
           <Filters onFilterChange={handleFilterChange} />
         </div>
-
-        <div>
+        {/* } */}
+        <div  className="nameCard">
+          <div style={{display:"flex", alignItems:"center", gap:"30px"}}>
           <h1>{city.toUpperCase()}</h1>
-          <div style={{ width: "700px" }}>
+           <h4 className="filterIcon" onClick={toggleFilters}> **</h4>
+
+          </div>
+
+          <div >
             {loading && <p>Loading hotels...</p>}
 
             {filteredHotels.map((hotel, index) => {

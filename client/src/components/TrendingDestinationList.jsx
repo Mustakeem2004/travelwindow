@@ -1,5 +1,6 @@
 import React from 'react'
 import TrendingDestinationCard from './TrendingDestinationCard'
+import './TrendingDestinationList.css'
 
 
 const TrendingDestinationList = () => {
@@ -37,12 +38,12 @@ const TrendingDestinationList = () => {
     
   return (
     <div>
-        <div style={{display:'flex' , flexDirection:'column' , justifyContent:'center' , alignItems:'center' , margin:'60px'}}>
-            <h1 style={{margin:'0px'}}>Trending destinations</h1>
+        <div style={{display:'flex' , flexDirection:'column' , justifyContent:'center' , alignItems:'center' , margin:'30px'}} className='TrendingCardHeading'>
+            <h1 style={{margin:'0px'}}>Trending Destinations</h1>
             <p>Most popular choices for travellers from India</p>
 
         </div>
-        <div style={{display: 'flex' ,alignItems:'center' ,justifyContent:'center' , flexWrap:'wrap' , gap:'30px' , width:'90%' , margin:'auto'}}>
+        <div className='TrendingListImg' style={{}}>
 
         {data.map((item) => (<TrendingDestinationCard key={item.id} data={item}></TrendingDestinationCard>))}
         </div>
