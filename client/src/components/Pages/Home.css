@@ -61,6 +61,8 @@
         height: 100vh;
         align-items: center;
         border-right: 2px solid black;
+        transform: translateX(0%);
+        z-index: 100000000000000000000;
         /* justify-content: center; */
         
         
@@ -176,6 +178,21 @@
         width: 250px;
         /* height: 150px; */
     }
+    .auth_buttons button{
+        margin-left: 3px;
+        font-size: 14px;
+        padding: 7px 12px;
+
+    }
+    .cart-icon{
+        width: 30px;
+    }
+    .iconsRightBox{
+        gap: 12px;
+    }
+    .userCircleNav{
+        width: 35px;
+    }
 
 
 }
@@ -252,6 +269,14 @@
         /* height: 140px; */
     }
 
+    .logo img{
+        height: 40px;
+        width: 40px;
+    }
+    .nav_bar{
+        padding: 10px 10px;
+    }
+
 }
 
 
@@ -289,6 +314,29 @@
         margin: auto;
         
     }
+
+
+        .auth_buttons button{
+        margin-left: 3px;
+        font-size: 12px;
+
+    }
+
+    .cart-icon{
+        width: 27px;
+    }
+    .nav_bar .iconsRightBox{
+        gap: 10px;
+        margin-right: 3px;
+    }
+
+    .triple{
+        width: 27px;
+    }
+    .userCircleNav{
+        width: 33px;
+    }
+
 
 }
 
@@ -330,11 +378,11 @@
 
 
 
-@media (max-width: 373px){
+@media (max-width: 363px){
 
         .cardsmall{
-        width: 225px;
-        /* height: 140px; */
+        width: 255px;
+        height: 170px;
     }
 
 

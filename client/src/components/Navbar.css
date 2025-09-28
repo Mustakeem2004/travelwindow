@@ -23,7 +23,7 @@
     cursor: pointer;
   }
 
-  .anchor {
+  .triplehide {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -32,8 +32,8 @@
 }
 
   
-  .anchor a {
-    margin: 0 30px;
+  .triplehide a {
+    margin: 0 20px;
     text-decoration: none;
     font-size: 16px;
     color: white;
@@ -41,7 +41,7 @@
     transition:  0.3s ease;
   }
   
-  .anchor a:hover {
+  .triplehide a:hover {
     color: #6c63ff;
   }
 
@@ -81,6 +81,14 @@
     background: #5848c2;
   }
 
+  .userCircleNav{
+     width: 40px;
+      filter: invert(1);
+       border-radius: 50%;
+       cursor: pointer;
+
+  }
+
 
 .cart-icon {
   width: 35px;
@@ -112,7 +120,7 @@
   color: black;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  min-width: 150px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   z-index: 1000;
@@ -127,9 +135,10 @@
   /* background: none; */
   text-align: left;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  word-wrap: break-word;  /* Allow breaking long words */
 }
 
 .dropdown-item:hover {
@@ -143,6 +152,16 @@
   display:none;
   width:30px;
   filter:invert(1);
+}
+
+
+
+.iconsRightBox{
+  display: flex;
+   align-items:center;
+    gap: 15px;
+     margin-right: 5px;
+
 }
 
 

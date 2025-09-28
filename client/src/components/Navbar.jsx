@@ -213,7 +213,7 @@ function Navbar() {
       {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="logo" style={{ width: "50px", filter: "invert(1)" }} />
+          <img src={logo} alt="logo" style={{ width: "40px",height:"40px", filter: "invert(1)" }} />
         </Link>
       </div>
 
@@ -226,16 +226,18 @@ function Navbar() {
       </div>
 
       {/* Right-side icons */}
-      <div style={{ display: "flex", alignItems: "center", gap: "15px", marginRight: "5px" }}>
+      <div className='iconsRightBox'>
         {/* Auth Section */}
         <div style={{ position: "relative" }}>
           {user ? (
             <>
               <img
+                
                 src={userIcon}
                 alt="user"
                 ref={userIconRef}
-                style={{ width: 40, filter: "invert(1)", borderRadius: "50%", cursor: "pointer" }}
+                
+                className='userCircleNav'
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               />
               {dropdownOpen && (

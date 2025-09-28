@@ -34,6 +34,10 @@
 }
 
 @media (max-width: 920px) {
+
+    .input_container{
+        width: 800px;
+    }
     .filterIcon{
     display: flex;
     }
@@ -45,7 +49,6 @@
     flex-direction: column;
     position: absolute;
     left: 0;
-    top: 300px; /* adjust */
     background: white;
     padding: 10px;
     z-index: 1000;
