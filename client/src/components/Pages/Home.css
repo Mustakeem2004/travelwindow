@@ -405,19 +405,19 @@
 
 
         .TrendingListImg{
-        max-width: 95%;
+        max-width: 100%;
         margin: auto;
-        gap: 8px;
+        gap: 6px;
     }
 
 }
 
 
 
-@media (max-width: 363px){
+@media (max-width: 358px){
 
         .cardsmall{
-        width: 255px;
+        width: 250px;
         height: 170px;
     }
 

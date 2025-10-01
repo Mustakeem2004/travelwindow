@@ -114,10 +114,10 @@ const changeToggleNav = () => {
 
       {/* Nav Links */}
       <div ref={navMenuRef} className={`${navtoggle ? "tripleshow" : "triplehide"}`}>
-        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} ><img className='navlogos' src={home} alt="" />Home</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}><img className='navlogos' src={about} alt="" />About</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}><img className='navlogos' src={contact} alt="" />Contact</NavLink>
-        <NavLink to="/bookings" className={({ isActive }) => isActive ? "active" : ""}><img className='navlogos' src={bad} alt="" />Bookings</NavLink>
+        <NavLink onClick={()=>setNavToggle(false)}  to="/" className={({ isActive }) => isActive ? "active" : ""} ><img className='navlogos' src={home} alt="" />Home</NavLink>
+        <NavLink onClick={()=>setNavToggle(false)} to="/about" className={({ isActive }) => isActive ? "active" : ""}><img className='navlogos' src={about} alt="" />About</NavLink>
+        <NavLink onClick={()=>setNavToggle(false)} to="/contact" className={({ isActive }) => isActive ? "active" : ""}><img className='navlogos' src={contact} alt="" />Contact</NavLink>
+        <NavLink onClick={()=>setNavToggle(false)} to="/bookings" className={({ isActive }) => isActive ? "active" : ""}><img className='navlogos' src={bad} alt="" />Bookings</NavLink>
       </div>
 
       {/* Right-side icons */}
