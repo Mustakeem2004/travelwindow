@@ -39,11 +39,19 @@
     color: white;
     font-weight: 500;
     transition:  0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
   
   .triplehide a:hover {
-    color: #6c63ff;
+    background-color: #6c63ff;
   }
+
+  .triplehide a.active{
+    background-color: #6c63ff;
+  }
+
+
 
   .auth_buttons{
     display: flex;
@@ -161,6 +169,13 @@
    align-items:center;
     gap: 15px;
      margin-right: 5px;
+
+}
+
+.navlogos{
+  height:25px;
+   margin-right:15px;
+  display:none;
 
 }
 

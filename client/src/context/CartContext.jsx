@@ -95,7 +95,7 @@ export const CartProvider = ({ children }) => {
 //   }
 // };
 
-  if (loading) return <div>Loading...</div>;
+  // if (loading) return <div>Loading...</div>;
 
   return (
     <CartContext.Provider value={{ cartItems,cartCount: cartItems.length, addToCart, removeFromCart }}>

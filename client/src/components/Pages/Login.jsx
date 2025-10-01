@@ -50,31 +50,26 @@ const Login = () => {
 
   return (
     <form 
-            style={{
-        border: "1px solid #e0e0e0",
-        height: "750px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        width: "500px",
-        margin: "auto",
-        gap: "20px",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-        marginTop: "15px",
-        paddingTop: "20px",
-        borderRadius: "7px",
-      }}
+      className="LoginBox"
     onSubmit={handleSubmit} >
       <h1>Login to your account</h1>
-
-      <div className="input-group">
+    <div className="Outside">
+          <div className="input-group">
         <label>Email</label>
         <input className="formInput" type="email" name="email" value={formdata.email} onChange={handleChange} required />
       </div>
 
-      <div className="input-group">
-        <label>Password</label>
+    </div>
+
+
+      <div  className="Outside">
+        <div className="input-group">
+          <label>Password</label>
         <input className="formInput" type="password" name="password" value={formdata.password} onChange={handleChange} required />
+
+        </div>
+
+
       </div>
 
       <div className="options">
@@ -84,7 +79,7 @@ const Login = () => {
 
       <button type="submit" className="signUpBtn">Login</button>
 
-      <p>---------------- or With -----------------</p>
+      <p className="orWith">-------------- or With ---------------</p>
 
       <button
         type="button"
@@ -99,6 +94,10 @@ const Login = () => {
       {/* <button type="button" className="facebookBtn">
         <img src={FacebookLogo} alt="Facebook" /> Login with Facebook
       </button> */}
+
+        <p style={{ marginTop: "15px" }}>
+        Did not have an account? <span style={{ color: "blue", cursor: "pointer" }} onClick={() => navigate("/login")}>Signup</span>
+      </p>
     </form>
   );
 };

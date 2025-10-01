@@ -46,40 +46,31 @@ const Signup = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{
-        border: "1px solid #e0e0e0",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        width: "500px",
-        margin: "auto",
-        gap: "20px",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-        marginTop: "50px",
-        marginBottom:"50px",
-        paddingTop: "20px",
-        borderRadius: "7px",
-      }}>
+    <form onSubmit={handleSubmit} className="LoginBox">
       <h1>Create an account</h1>
-
+  <div  className="Outside">
       <div className="input-group">
         <label>Name</label>
         <input className="formInput" type="text" name="name" value={formdata.name} onChange={handleChange} required />
       </div>
+    </div>
 
+      <div  className="Outside">
       <div className="input-group">
         <label>Email</label>
         <input className="formInput" type="email" name="email" value={formdata.email} onChange={handleChange} required />
       </div>
-
+      </div>
+           <div  className="Outside">
       <div className="input-group">
         <label>Password</label>
         <input className="formInput" type="password" name="password" value={formdata.password} onChange={handleChange} required />
       </div>
+      </div>
 
       <button type="submit" className="signUpBtn">Sign up</button>
 
-      <p>---------------- or With -----------------</p>
+      <p className="orWith">-------------- or With ---------------</p>
 
       <button type="button" className="googleBtn" onClick={() => {
         window.location.href = "https://travelwindow-backend.onrender.com/api/auth/google";
